@@ -1,0 +1,56 @@
+@charset 'utf-8';
+
+@font-face{   
+   font-family:'Vrinda';
+   src:url('../../fonts/vrinda.eot?41a329');/* EOT file for IE */
+   src:url('../../fonts/vrinda.eot?#iefix&41a329') format('embedded-opentype'), 
+       url('../../fonts/vrinda.otf') format('otf'), 
+       url('../../fonts/vrinda.ttf?41a329') format('truetype'), /* TTF file for CSS3 browsers */
+       url('../../fonts/vrinda.svg#klant_font') format('svg');
+}
+
+@font-face{   
+   font-family:'Vrinda_bold';
+   src:url('../../fonts/vrindab.eot?41a329');/* IE9 Compat Modes */
+   src:url('../../fonts/vrindab.eot?#iefix&41a329') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/vrindab.otf') format('otf'), 
+       url('../../fonts/vrindab.ttf?41a329') format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/vrindab.svg#klant_font_bold') format('svg');/* Legacy iOS */
+}
+
+
+@font-face{   
+   font-family:'rijks';
+   src:url('../../fonts/RijksoverheidSansTT-Regular.eot?41a329');/* EOT file for IE */
+   src:url('../../fonts/RijksoverheidSansTT-Regular.eot?#iefix&41a329') format('embedded-opentype'), 
+       url('../../fonts/RijksoverheidSansTT-Regular.otf') format('otf'), 
+       url('../../fonts/RijksoverheidSansTT-Regular.ttf?41a329') format('truetype') /* TTF file for CSS3 browsers */
+       /*url('../../fonts/RijksoverheidSansTT-Regular.svg#rijks') format('svg');*/
+}
+
+@font-face{   
+   font-family:'rijks_bold';
+   src:url('../../fonts/RijksoverheidSansTT-Bold.eot?41a329');/* IE9 Compat Modes */
+   src:url('../../fonts/RijksoverheidSansTT-Bold.eot?#iefix&41a329') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/RijksoverheidSansTT-Bold.otf') format('otf'), 
+       url('../../fonts/RijksoverheidSansTT-Bold.ttf?41a329') format('truetype') /* Safari, Android, iOS */
+       /*url('../../fonts/RijksoverheidSansTT-Bold.svg#rijks_bold') format('svg');*//* Legacy iOS */
+}
+
+@font-face{   
+   font-family:'rijks_bold_italic';
+   src:url('../../fonts/RijksoverheidSansTT-BoldItalic.eot?41a329');/* EOT file for IE */
+   src:url('../../fonts/RijksoverheidSansTT-BoldItalic.eot?#iefix&41a329') format('embedded-opentype'), 
+       url('../../fonts/RijksoverheidSansTT-BoldItalic.otf') format('otf'), 
+       url('../../fonts/RijksoverheidSansTT-BoldItalic.ttf?41a329') format('truetype') /* TTF file for CSS3 browsers */
+       /*url('../../fonts/RijksoverheidSansTT-BoldItalic.svg#rijks_bold_italic') format('svg');*/
+}
+
+@font-face{   
+   font-family:'rijks_italic';
+   src:url('../../fonts/RijksoverheidSansTT-Italic.eot?41a329');/* EOT file for IE */
+   src:url('../../fonts/RijksoverheidSansTT-Italic.eot?#iefix&41a329') format('embedded-opentype'), 
+       url('../../fonts/RijksoverheidSansTT-Italic.otf') format('otf'), 
+       url('../../fonts/RijksoverheidSansTT-Italic.ttf?41a329') format('truetype') /* TTF file for CSS3 browsers */
+       /*url('../../fonts/RijksoverheidSansTT-Italic.svg#rijks_italic') format('svg');*/
+}

@@ -1,0 +1,654 @@
+#item_vraag {
+   font-size:1rem;
+}
+#trainingsItemOpen .assignment .padding #item_vraag p, 
+#trainingsItemOpen .assignment .padding #item_vraag div {
+    font-size: 1rem;
+}
+#trainingsItemOpen .assignment .padding #item_vraag a,
+#trainingsItemOpen .assignment .padding #item_vraag font,
+#trainingsItemOpen .assignment .padding #item_vraag span{font-size:inherit;}
+
+#item_vraag .vraag p:last-child {
+   margin-bottom: 0;
+}
+/*################################################################################*/
+/*multiple choice vraag in de items*/
+
+.antwoordfout{
+}
+
+.antwoordfoutsel{
+	border:2px solid #0281c2;
+	background-color: #0281c224 !important;
+}
+
+.antwoordgoed{
+	border:2px solid #0A0;
+  	background-color: #00AA0021 !important;
+}
+
+.antwoordgoedsel{
+	border:3px solid #0A0;
+   	background-color: #00AA0021 !important;
+}
+
+ul.cbt_vraag{
+   position:relative;
+   list-style: none;
+   margin: 10px 0px 0px 0px !important;
+   padding: 0px !important;
+}
+ul.cbt_vraag > li.cbt_vraag_antw_optie,
+div.sterrenblok{
+   position:relative;
+   display:block;
+   width:100%;
+/*   border-bottom:1px solid #CCC;*/
+   background-image:none !important;
+   padding:5px 0;
+   
+}
+div.sterrenblok{
+   margin: 10px 0px 0px 0px !important;
+}
+.assignment_content ul.cbt_vraag > li.cbt_vraag_antw_optie{
+   margin: 0px;
+   padding: 5px 0px 5px 0px !important;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content:flex-start;
+   align-content:center;
+   align-items:center;
+}
+.staaf_container{
+   order:1;
+   position:relative;
+   height: 25px;
+   line-height:25px !important;
+   width:25px;
+   overflow:hidden;
+   display:flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+   align-content: center;
+   
+   -webkit-border-radius:12.5px;
+   -moz-border-radius:12.5px;
+   border-radius:12.5px;
+   
+   flex: 0 1 auto;
+   
+}
+#item_vraag.is_niet_beantwoord ul.fb_staafdiagram .staaf_container,
+ul.cbt_vraag.fb_tekst div.staaf_container{   
+   flex: 0 0 25px;
+}
+ul.cbt_vraag.fb_staafdiagram div.staaf_container{   
+   flex: 1 0 25px;
+}
+
+#item_vraag.is_beantwoord ul.fb_staafdiagram .staaf_container{
+   background-color: #CCC;
+   /*flex: 0 1 210px;   */
+   flex: 0 1 25px;   
+   
+   animation-name: staaf_groei_ani;
+   animation-duration: 500ms; /* or: Xms */
+   animation-iteration-count: 1;
+   animation-direction: normal; /* or: normal */
+   animation-timing-function: linear; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+   animation-fill-mode: forwards; /* or: backwards, both, none */
+   animation-delay: 0s; /* or: Xms */
+}
+
+@-webkit-keyframes staaf_groei_ani {
+   from {flex-basis: 25px;}
+   to {flex-basis: 210px;}
+}
+@-moz-keyframes staaf_groei_ani {
+   from {flex-basis: 25px;}
+   to {flex-basis: 210px;}
+}
+@-o-keyframes staaf_groei_ani {
+   from {flex-basis: 25px;}
+   to {flex-basis: 210px;}
+}
+@keyframes staaf_groei_ani {
+   from {flex-basis: 25px;}
+   to {flex-basis: 210px;}
+}
+
+#item_vraag.is_niet_beantwoord ul.cbt_vraag > li.cbt_vraag_antw_optie{cursor:pointer;}
+
+
+li.cbt_vraag_antw_optie .vraag_counter{
+   display: none;
+   flex: 0 1 20px;
+   order:2;
+   color: rgba(1, 105, 157,1);
+   font-size:16px;
+   position:relative;
+   font-weight:bold;
+   text-align:center;
+}   
+li.cbt_vraag_antw_optie .vraag_counter:after{content:' ';}
+
+ul.cbt_vraag > li.cbt_vraag_antw_optie.sel .vraag{
+   font-weight:bold;
+}
+ul.cbt_vraag div.vraag{
+   order:3;
+   line-height: 25px;
+   padding: 0 5px 0 .5em;
+}
+
+ul.cbt_vraag.fb_staafdiagram div.vraag,
+ul.cbt_vraag.fb_tekst div.vraag{   
+   /*flex: 0 1 calc(100% - 25px);   */
+   flex: 0 1 auto;   
+}
+
+#item_vraag.is_beantwoord ul.cbt_vraag.fb_staafdiagram div.vraag{   
+   flex: 0 1 calc(100% - 210px);   
+}
+
+ul.cbt_vraag > li.cbt_vraag_antw_optie div.vraagBolletje{
+   flex:0 0 25px;
+   order:1;
+}
+
+ul.cbt_vraag > li.cbt_vraag_antw_optie div.vraagBolletje:after{
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 100%;
+   content: ' ';
+   width: 23px;
+   height: 23px;
+   display: block;
+   margin: 1px;
+   position:relative;
+   z-index:1;
+   background-color: rgba(255,255,255,1);
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+}
+/*SINGLE SELECT*/
+ul.cbt_vraag.cbt_vraag_single_select > li.cbt_vraag_antw_optie div.vraagBolletje:after{ background-image: url(../../images/icons/radio_unchecked.svg);}   
+#item_vraag.is_niet_beantwoord ul.cbt_vraag.cbt_vraag_single_select > li.cbt_vraag_antw_optie:hover div.vraagBolletje:after,
+ul.cbt_vraag.cbt_vraag_single_select > li.cbt_vraag_antw_optie.sel div.vraagBolletje:after{ background-image: url(../../images/icons/radio_checked.svg);}   
+/*MULTI SELECT*/
+ul.cbt_vraag.cbt_vraag_multi_select > li.cbt_vraag_antw_optie div.vraagBolletje:after{ background-image: url(../../images/icons/checkbox_unchecked.svg);background-size: 80%;}   
+#item_vraag.is_niet_beantwoord ul.cbt_vraag.cbt_vraag_multi_select > li.cbt_vraag_antw_optie:hover div.vraagBolletje:after,
+ul.cbt_vraag.cbt_vraag_multi_select > li.cbt_vraag_antw_optie.sel div.vraagBolletje:after{ background-image: url(../../images/icons/checkbox_checked.svg);background-size: 80%;}   
+
+ul.cbt_vraag > li.cbt_vraag_antw_optie div.staaf{
+   order: 0;
+   background-color: rgba(1, 105, 157,1);
+   position: absolute;
+   z-index:0;
+   display: block;
+   left: 0;
+   width:0;
+   height: 25px;
+   -webkit-border-radius: 12.5px;
+   -moz-border-radius: 12.5px;
+   border-radius: 12.5px;
+   -webkit-transition: width 1500ms; /* Safari */
+   transition: width 1500ms;
+   -webkit-transition-delay: 500ms;
+   transition-delay: 500ms;
+}
+
+
+.assignment_half ul.cbt_vraag div.vraag{
+   max-width:90%;
+}
+ul.cbt_vraag div.vraag.breed{
+   width:620px;
+}
+ul.cbt_vraag div.vraag.smal{
+   width:420px;
+}
+
+.staaf_container .procenten {
+	order: 4;
+   flex:0 1 100%;
+   position:relative;
+   z-index:2;
+   text-align:right;
+   text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+	padding-right: 5px !important;
+   color:#fff !important;
+   font-weight: normal !important;
+}
+
+
+
+.floatbox{
+   float:left;
+	border:1px solid;
+	margin:4px;
+   background-color:#CCC;
+}
+
+.absoluut_aantal{
+   position:relative;
+   right:0px;
+	margin:0px;
+   float:right;
+   background-color:#CCC;
+   color:#000;
+   line-height:20px; height:20px;
+   min-width:20px;
+   text-align:center;
+}
+
+.procenten span{
+   color:#666;
+   width:60px;
+   padding:0px 2px 0px 0px;
+   height:20px;
+   float:right;
+   text-align:right;
+}
+
+.tekstfeedback{
+   margin-left: 2em;
+/*   display: none;*/
+   order: 4;
+   flex: 0 1 auto;
+   padding:0; 
+   display: flex;
+   flex-flow: row wrap;
+   align-content: center;
+   align-items: center;   
+}
+.tekstfeedback.heeft_tekst{padding:3px 1em 3px 3px;}
+.tekstfeedback.heeft_tekst:before{margin-right:.5em;}
+
+.feedback_goed{border: 1px solid #a4d882 !important; background-color: #f0f9e7}
+.feedback_fout{border: 1px solid #F44336 !important; background-color: #fff7f7}
+.feedback_neutraal{border: 1px solid #CCC !important;}
+
+.feedback_goed .radio_check_txt:after {
+   content: '\f00c';
+   background-image: none;
+   font-family: FontAwesome;
+   font-size: 2rem;
+   color: #6ad524;
+   position: absolute;
+   right: 5px;
+   top: 2px;
+}
+.feedback_fout .radio_check_txt:after {
+   content: '\f00d';
+   background-image: none;
+   font-family: FontAwesome;
+   font-size: 2rem;
+   color: #F44336;
+   position: absolute;
+   right: 5px;
+   top: 2px;
+}
+
+.tekstfeedback:before{
+   content:'';
+   width:25px; height:25px;
+   background-size:contain;
+   background-position:center;
+   background-repeat:no-repeat;
+   display:block;   
+}
+.tekstfeedback.feedback_goed:before, .feedback_goed:before {background-image: url('../../images/antw_goed.png');}
+.tekstfeedback.feedback_fout:before{background-image: url('../../images/antw_fout.png');}
+.tekstfeedback.feedback_neutraal:before{background-image: url('../../images/antw_neutraal.png');display:none;}
+.orbg{
+   border: 1px solid #fcb316;
+   background-color: #595959;
+}
+
+.grbg{
+   border: 1px solid #00a53d;
+   background-color: #b3c833;
+}
+
+.vraag_inleiding{
+   display:inline-block;
+}
+.feedback, .feedback_na_goed_antw, .feedback_na_fout_antw{
+   display:none;
+   position:relative;
+   margin:30px auto 20px auto;
+   font-size:1.2em;
+   line-height:1.5em;
+   width:80%;
+   background: #FFF;
+   padding: 0.5em 10px;
+}
+.feedback{border: 2px solid #CCC;background-color:#F2F2F2;}
+.feedback_na_goed_antw{border: 4px solid #008000;}
+.feedback_na_fout_antw{border: 4px solid #ff0000;}
+
+.feedback:after, .feedback:before,
+.feedback_na_goed_antw:before, .feedback_na_fout_antw:before,
+.feedback_na_goed_antw:after, .feedback_na_fout_antw:after{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.feedback:after, .feedback_na_goed_antw:after, .feedback_na_fout_antw:after{
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #Fff;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.feedback:before, .feedback_na_goed_antw:before, .feedback_na_fout_antw:before{
+	border-color: rgba(204, 204, 204, 0);
+	/*border-bottom-color: #ccc;*/
+	border-width: 22px;
+	margin-left: -22px;
+}
+.feedback:before{border-bottom-color: #CCC;}
+.feedback_na_goed_antw:before{border-bottom-color: #008000;}
+.feedback_na_fout_antw:before{border-bottom-color: #ff0000;}
+
+.uitleg{
+   font-size:.8em;
+   margin-top:3px;
+   color:#666;
+}
+
+.aanvullend_tekstveld{
+   order:5;
+	width:450px;
+}
+#drag .aanvullend_tekstveld, #drop .aanvullend_tekstveld{
+   width:250px;
+}
+
+.heel_klein{
+   font: 9px Arial;
+   line-height:10px !important;
+   white-space:normal;
+   padding:0px !important;
+   margin-top:-4px;
+   margin-bottom:-4px;
+   color:#666;
+}
+.heel_klein td, .heel_klein td span{
+   font: 9px Arial;
+   line-height:10px !important;
+   white-space:normal;
+   color:#666;
+   cursor:default;
+}
+
+.vraag_info{
+	margin-top:12px;
+}
+
+.kleinzwart span{
+	font-size:8pt !important;
+}
+
+.resultaten_titel{
+
+}
+
+.resultaten_titel h3{
+	font-size:14px;
+}
+
+.slider_resultaat_container{
+	overflow:visible;
+	width:380px;
+	left:190px;
+	position:relative;
+	height:40px;
+}
+
+.antw .label{
+   margin-top:-37px;
+   width: 185px;
+}
+
+.antw .label_1{
+	float:left;
+}
+
+.antw .label_2{
+	text-align:right;
+	float:right;
+}
+
+.slider_resultaat_container img, .slider_resultaat_container div{
+	top:0px;
+	position:absolute;
+}
+
+.slider_resultaat_container .bg{
+	width:400px;
+}
+
+.slider_resultaat_container .eigen_rondje span{
+	top:2px;
+}
+
+.slider_resultaat_container .groeps_rondje span,
+.slider_resultaat_container .groeps_rondje_percentiel span{
+	top:-53px;
+}
+
+.slider_resultaat_container .eigen_rondje .info_balkje{
+	top:22px;
+}
+
+.slider_resultaat_container .groeps_rondje .info_balkje,
+.slider_resultaat_container .groeps_rondje_percentiel .info_balkje{
+	top:-27px;
+}
+
+.slider_resultaat_container .eigen_rondje span,
+.slider_resultaat_container .eigen_rondje .info_balkje,
+.slider_resultaat_container .groeps_rondje span,
+.slider_resultaat_container .groeps_rondje .info_balkje,
+.slider_resultaat_container .groeps_rondje_percentiel span,
+.slider_resultaat_container .groeps_rondje_percentiel .info_balkje{
+	position:relative;
+	line-height:20px;
+	text-align:center;
+	white-space:nowrap;
+	display:block;
+}
+
+.slider_resultaat_container .eigen_rondje span,
+.slider_resultaat_container .eigen_rondje .info_balkje,
+.slider_resultaat_container .groeps_rondje span,
+.slider_resultaat_container .groeps_rondje .info_balkje
+{
+	left:-70px;
+}
+.slider_resultaat_container .groeps_rondje_percentiel span,
+.slider_resultaat_container .groeps_rondje_percentiel .info_balkje{
+   left: -20px;
+}
+
+.sterren_resultaat_container{
+	width:150px;
+	left:315px;
+	position:relative;
+	text-align:center;
+}
+
+.sterren_resultaat_container div{
+	width:150px;
+	height:30px;
+	overflow:hidden;
+	margin:3px 3px 10px 3px;
+	position:relative;
+}
+
+.sterren_resultaat_container span{
+}
+
+.sterren_resultaat_container .s1 img{margin-top:-30px;}
+.sterren_resultaat_container .s2 img{margin-top:-60px;}
+.sterren_resultaat_container .s3 img{margin-top:-90px;}
+.sterren_resultaat_container .s4 img{margin-top:-120px;}
+.sterren_resultaat_container .s5 img{margin-top:-150px;}
+
+
+
+.floatleft{
+   float:left;
+}
+.floatright{
+   float:right;
+}
+.tot_invullers{
+   display:block;
+   border-top:1px solid #808080;
+   text-align:right;
+   width:100%;/*
+   margin-top:3px;
+   padding: 5px 0;*/
+   line-height:20px;
+   margin-right:10px;
+   position:relative;
+}
+.gem_score{
+   font-size:16px;
+   line-height:50px;
+   height:50px;
+}
+
+
+
+@media print {
+   .niet_printen{display:none;}
+   .pb{page-break-after:auto;}
+
+   .titel_monitor_vraag{
+      width:100%;
+   }
+   .monitor_header{
+      width:100%;
+   }
+   .monitor_header tr{
+      float:left;
+      background-color:#FFF;
+      border: 1px solid #CCC;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      margin: 0 10px 10px 0;
+   }
+   .monitor_header td{
+      font-size:8pt;
+      line-height: 8pt;
+      padding:5px;
+   }
+   .staaf_container .procenten {
+      text-shadow: none;
+   }
+}
+
+@media screen {
+
+   .titel_monitor_vraag{
+      width:100%;
+   }
+   .monitor_header{
+      width:100%;
+   }
+   .monitor_header tr{
+      float:left;
+      background-color:#FFF;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      margin: 0 10px 10px 0;
+   }
+   .monitor_header td{
+      font-size:10px;
+      line-height: 10px;
+      padding:5px;
+   }
+
+}
+
+.monitor_header .tekst ul,
+.monitor_header .tekst li
+{
+   margin:0px; padding:0px;
+   list-style:none;
+   font-size: 12px;
+}
+
+.vraag_kop,
+.vraag_kop p{
+   font-size: 16px;
+   line-height: 24px;
+   padding:0px; margin:0px;
+}
+
+.algemene_toelichting{
+
+   
+}
+.algemene_toelichting textarea{
+   min-height:100px;
+}
+.algemene_toelichting textarea,
+.algemene_toelichting .antwoord_open_vraag{
+   width:80%;
+   display:block;
+   position:relative;
+   margin: 0 auto;
+   font-size:1.2em;
+   line-height:1.5em;
+   
+   padding: 4px;
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+   border: 2px inset rgba(255, 255, 255, 0.5) !important;
+   background-color: rgb(245, 245, 245);
+
+}
+.algemene_toelichting #aantalChar{
+   width:80%;
+   margin: 0 auto;
+}
+.antwoord_open_vraag{
+   background: #f9f9f9;
+   border-left: 10px solid #ccc;
+   margin: 1.5em 10px;
+   padding: 0.5em 10px;
+   quotes: "\201C""\201D""\2018""\2019";
+}
+.antwoord_open_vraag:before, .antwoord_open_vraag:after{
+   color: #ccc;
+   font-size: 3em;
+   line-height: 0.1em;
+   vertical-align: -0.4em;
+}
+
+.antwoord_open_vraag:before{
+   content: open-quote;
+   margin-right: 0.25em;
+}
+
+.antwoord_open_vraag:after{
+   content: close-quote;
+   margin-left: 0.25em;
+}
+

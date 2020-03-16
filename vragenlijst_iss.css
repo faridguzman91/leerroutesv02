@@ -1,0 +1,33 @@
+/*vragenlijst_iss*/
+#vorige_btn::before {content: 'previous';}
+#volgende_btn::before {content: 'next';}
+#opslaan_btn::before {content: 'submit';}
+
+/*#vraag_antw_7947{display:none !important;}
+
+body.vragenlijst.g01 {} /* MA students */
+body.vragenlijst.g02 {} /* PhD students (incl final yr) */
+body.vragenlijst.g03 {} /* All staff */
+body.vragenlijst.g04 {} /* Academic staff / Research Groups / Teaching staff /  */
+body.vragenlijst.g05 {} /* MSO/Support staff (incl deconcentrated) */
+body.vragenlijst.g06 {} /* Academic project leaders */
+body.vragenlijst.g07 {} /* BoE members */
+body.vragenlijst.g08 {} /* Editorial Board */
+body.vragenlijst.g09 {} /* IB */
+body.vragenlijst.g10 {} /* ID */
+body.vragenlijst.g11 {} /* Business Controller */
+body.vragenlijst.g12 {} /* Major Convenors */
+body.vragenlijst.g13 {} /* Communication and marketing department */
+body.vragenlijst.g14 {} /* Academic Registrar */
+body.vragenlijst.g15 {} /* Student Counselor */
+body.vragenlijst.g16 {} /* Project office */
+body.vragenlijst.g17 {} /* Admissions office */
+body.vragenlijst.g18 {} /* PhD office */
+body.vragenlijst.g19 {} /* FCC */
+body.vragenlijst.g21 {} /* RDC */
+body.vragenlijst.g22 {} /* Policy advisor */
+body.vragenlijst.g23 {} /* IC */
+body.vragenlijst.g24 {} /* PCC */
+body.vragenlijst.g25 {} /* Project Research Office */
+body.vragenlijst.g26 {} /* Travel Manager */
+body.vragenlijst.g27 {} /* Study coordinator */

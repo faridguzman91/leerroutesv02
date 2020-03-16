@@ -1,0 +1,33 @@
+/*@media screen and (max-width: 768px) and (orientation:landscape) {*/
+/*@media screen and (max-width: 768px) and (orientation:landscape){*/
+@media screen and (max-width: 768px) {
+   /*enquete--------------------------------------------------------------------------------------*/
+   #vorigeBtnEnqVraag.mobiel,
+   #volgendeBtnEnqVraag.mobiel,
+   #opslaanBtnEnq.mobiel{
+      width: 45% !important; /*width: 49% !important;*/
+      line-height:37px; 
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 5px;
+   }
+
+   #vragen_container{
+      margin-bottom:65px;
+   }
+   #enqueteBtns{   
+      position:fixed;
+      bottom:0px;
+   }
+
+   #vraag_cntr_container ul li.vraag_cntr_sel a{
+      text-indent:0 !important;
+   }
+   
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+   select:focus, textarea:focus, input:focus {
+      font-size: 16px;
+      background:#eee;
+   }
+}

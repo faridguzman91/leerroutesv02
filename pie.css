@@ -1,0 +1,153 @@
+/**********************************************************************************************************************PIE*/
+div.pie
+{
+   background-color:#afd3e3;/*niet afgerond kleur: wit */
+   background-image: linear-gradient(to right, transparent 50%, #2d9bce 0);/*afgerond kleur: blauw*/
+   width:50px; height:50px;
+   border-radius:50%;   
+   position: relative;
+   margin: 0 auto;   
+   border:2px solid #2d9bce;
+}
+/*Vanaf 51% is het systeem omgedraaid, dus kleuren moeten dan ook omgedraaid*/
+div.pie.pie_percentage_51,div.pie.pie_percentage_52,div.pie.pie_percentage_53,div.pie.pie_percentage_54,div.pie.pie_percentage_55,div.pie.pie_percentage_56,div.pie.pie_percentage_57,div.pie.pie_percentage_58,div.pie.pie_percentage_59,div.pie.pie_percentage_60,div.pie.pie_percentage_61,div.pie.pie_percentage_62,div.pie.pie_percentage_63,div.pie.pie_percentage_64,div.pie.pie_percentage_65,div.pie.pie_percentage_66,div.pie.pie_percentage_67,div.pie.pie_percentage_68,div.pie.pie_percentage_69,div.pie.pie_percentage_70,div.pie.pie_percentage_71,div.pie.pie_percentage_72,div.pie.pie_percentage_73,div.pie.pie_percentage_74,div.pie.pie_percentage_75,div.pie.pie_percentage_76,div.pie.pie_percentage_77,div.pie.pie_percentage_78,div.pie.pie_percentage_79,div.pie.pie_percentage_80,div.pie.pie_percentage_81,div.pie.pie_percentage_82,div.pie.pie_percentage_83,div.pie.pie_percentage_84,div.pie.pie_percentage_85,div.pie.pie_percentage_86,div.pie.pie_percentage_87,div.pie.pie_percentage_88,div.pie.pie_percentage_89,div.pie.pie_percentage_90,div.pie.pie_percentage_91,div.pie.pie_percentage_92,div.pie.pie_percentage_93,div.pie.pie_percentage_94,div.pie.pie_percentage_95,div.pie.pie_percentage_96,div.pie.pie_percentage_97,div.pie.pie_percentage_98,div.pie.pie_percentage_99,div.pie.pie_percentage_100{   
+   background-color:#2d9bce;/*afgerond kleur*/
+   background-image: linear-gradient(to right, transparent 50%, #afd3e3 0);/*niet afgerond kleur*/
+   transform:rotate(180deg);
+}
+div.pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+}
+div.pie::after{
+   content:attr(title);
+   color: #FFF;
+   /*transform: rotate(180deg);*/
+   line-height: 50px;
+   display: block;
+   position: absolute;
+   top: -2px;
+   left: -2px;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   padding: 0;
+   
+}
+div.pie.pie_percentage_100:not(.pie_nocheck):after{
+   content: '\f00c';
+   font-family: FontAwesome;
+   font-size: 26px;
+}
+
+
+/**********************************************************************************************************************PIE PER GRADEN*/
+div.pie.pie_percentage_0::before {transform: rotate(0deg);}
+div.pie.pie_percentage_1::before {transform: rotate(4deg);}
+div.pie.pie_percentage_2::before {transform: rotate(7deg);}
+div.pie.pie_percentage_3::before {transform: rotate(11deg);}
+div.pie.pie_percentage_4::before {transform: rotate(14deg);}
+div.pie.pie_percentage_5::before {transform: rotate(18deg);}
+div.pie.pie_percentage_6::before {transform: rotate(22deg);}
+div.pie.pie_percentage_7::before {transform: rotate(25deg);}
+div.pie.pie_percentage_8::before {transform: rotate(29deg);}
+div.pie.pie_percentage_9::before {transform: rotate(32deg);}
+div.pie.pie_percentage_10::before {transform: rotate(36deg);}
+div.pie.pie_percentage_11::before {transform: rotate(40deg);}
+div.pie.pie_percentage_12::before {transform: rotate(43deg);}
+div.pie.pie_percentage_13::before {transform: rotate(47deg);}
+div.pie.pie_percentage_14::before {transform: rotate(50deg);}
+div.pie.pie_percentage_15::before {transform: rotate(54deg);}
+div.pie.pie_percentage_16::before {transform: rotate(58deg);}
+div.pie.pie_percentage_17::before {transform: rotate(61deg);}
+div.pie.pie_percentage_18::before {transform: rotate(65deg);}
+div.pie.pie_percentage_19::before {transform: rotate(68deg);}
+div.pie.pie_percentage_20::before {transform: rotate(72deg);}
+div.pie.pie_percentage_21::before {transform: rotate(76deg);}
+div.pie.pie_percentage_22::before {transform: rotate(79deg);}
+div.pie.pie_percentage_23::before {transform: rotate(83deg);}
+div.pie.pie_percentage_24::before {transform: rotate(86deg);}
+div.pie.pie_percentage_25::before {transform: rotate(90deg);}
+div.pie.pie_percentage_26::before {transform: rotate(94deg);}
+div.pie.pie_percentage_27::before {transform: rotate(97deg);}
+div.pie.pie_percentage_28::before {transform: rotate(101deg);}
+div.pie.pie_percentage_29::before {transform: rotate(104deg);}
+div.pie.pie_percentage_30::before {transform: rotate(108deg);}
+div.pie.pie_percentage_31::before {transform: rotate(112deg);}
+div.pie.pie_percentage_32::before {transform: rotate(115deg);}
+div.pie.pie_percentage_33::before {transform: rotate(119deg);}
+div.pie.pie_percentage_34::before {transform: rotate(122deg);}
+div.pie.pie_percentage_35::before {transform: rotate(126deg);}
+div.pie.pie_percentage_36::before {transform: rotate(130deg);}
+div.pie.pie_percentage_37::before {transform: rotate(133deg);}
+div.pie.pie_percentage_38::before {transform: rotate(137deg);}
+div.pie.pie_percentage_39::before {transform: rotate(140deg);}
+div.pie.pie_percentage_40::before {transform: rotate(144deg);}
+div.pie.pie_percentage_41::before {transform: rotate(148deg);}
+div.pie.pie_percentage_42::before {transform: rotate(151deg);}
+div.pie.pie_percentage_43::before {transform: rotate(155deg);}
+div.pie.pie_percentage_44::before {transform: rotate(158deg);}
+div.pie.pie_percentage_45::before {transform: rotate(162deg);}
+div.pie.pie_percentage_46::before {transform: rotate(166deg);}
+div.pie.pie_percentage_47::before {transform: rotate(169deg);}
+div.pie.pie_percentage_48::before {transform: rotate(173deg);}
+div.pie.pie_percentage_49::before {transform: rotate(176deg);}
+div.pie.pie_percentage_50::before {transform: rotate(180deg);}
+
+div.pie.pie_percentage_51::before {transform: rotate(184deg);}
+div.pie.pie_percentage_52::before {transform: rotate(187deg);}
+div.pie.pie_percentage_53::before {transform: rotate(191deg);}
+div.pie.pie_percentage_54::before {transform: rotate(194deg);}
+div.pie.pie_percentage_55::before {transform: rotate(198deg);}
+div.pie.pie_percentage_56::before {transform: rotate(202deg);}
+div.pie.pie_percentage_57::before {transform: rotate(205deg);}
+div.pie.pie_percentage_58::before {transform: rotate(209deg);}
+div.pie.pie_percentage_59::before {transform: rotate(212deg);}
+div.pie.pie_percentage_60::before {transform: rotate(216deg);}
+div.pie.pie_percentage_61::before {transform: rotate(220deg);}
+div.pie.pie_percentage_62::before {transform: rotate(223deg);}
+div.pie.pie_percentage_63::before {transform: rotate(227deg);}
+div.pie.pie_percentage_64::before {transform: rotate(230deg);}
+div.pie.pie_percentage_65::before {transform: rotate(234deg);}
+div.pie.pie_percentage_66::before {transform: rotate(238deg);}
+div.pie.pie_percentage_67::before {transform: rotate(241deg);}
+div.pie.pie_percentage_68::before {transform: rotate(245deg);}
+div.pie.pie_percentage_69::before {transform: rotate(248deg);}
+div.pie.pie_percentage_70::before {transform: rotate(252deg);}
+div.pie.pie_percentage_71::before {transform: rotate(256deg);}
+div.pie.pie_percentage_72::before {transform: rotate(259deg);}
+div.pie.pie_percentage_73::before {transform: rotate(263deg);}
+div.pie.pie_percentage_74::before {transform: rotate(266deg);}
+div.pie.pie_percentage_75::before {transform: rotate(270deg);}
+div.pie.pie_percentage_76::before {transform: rotate(274deg);}
+div.pie.pie_percentage_77::before {transform: rotate(277deg);}
+div.pie.pie_percentage_78::before {transform: rotate(281deg);}
+div.pie.pie_percentage_79::before {transform: rotate(284deg);}
+div.pie.pie_percentage_80::before {transform: rotate(288deg);}
+div.pie.pie_percentage_81::before {transform: rotate(292deg);}
+div.pie.pie_percentage_82::before {transform: rotate(295deg);}
+div.pie.pie_percentage_83::before {transform: rotate(299deg);}
+div.pie.pie_percentage_84::before {transform: rotate(302deg);}
+div.pie.pie_percentage_85::before {transform: rotate(306deg);}
+div.pie.pie_percentage_86::before {transform: rotate(310deg);}
+div.pie.pie_percentage_87::before {transform: rotate(313deg);}
+div.pie.pie_percentage_88::before {transform: rotate(317deg);}
+div.pie.pie_percentage_89::before {transform: rotate(320deg);}
+div.pie.pie_percentage_90::before {transform: rotate(324deg);}
+div.pie.pie_percentage_91::before {transform: rotate(328deg);}
+div.pie.pie_percentage_92::before {transform: rotate(331deg);}
+div.pie.pie_percentage_93::before {transform: rotate(335deg);}
+div.pie.pie_percentage_94::before {transform: rotate(338deg);}
+div.pie.pie_percentage_95::before {transform: rotate(342deg);}
+div.pie.pie_percentage_96::before {transform: rotate(346deg);}
+div.pie.pie_percentage_97::before {transform: rotate(349deg);}
+div.pie.pie_percentage_98::before {transform: rotate(353deg);}
+div.pie.pie_percentage_99::before {transform: rotate(356deg);}
+div.pie.pie_percentage_100::before {transform: rotate(360deg);}
+
+div.pie.pie_percentage_51::after, div.pie.pie_percentage_52::after, div.pie.pie_percentage_53::after, div.pie.pie_percentage_54::after, div.pie.pie_percentage_55::after, div.pie.pie_percentage_56::after, div.pie.pie_percentage_57::after, div.pie.pie_percentage_58::after, div.pie.pie_percentage_59::after, div.pie.pie_percentage_60::after, div.pie.pie_percentage_61::after, div.pie.pie_percentage_62::after, div.pie.pie_percentage_63::after, div.pie.pie_percentage_64::after, div.pie.pie_percentage_65::after, div.pie.pie_percentage_66::after, div.pie.pie_percentage_67::after, div.pie.pie_percentage_68::after, div.pie.pie_percentage_69::after, div.pie.pie_percentage_70::after, div.pie.pie_percentage_71::after, div.pie.pie_percentage_72::after, div.pie.pie_percentage_73::after, div.pie.pie_percentage_74::after, div.pie.pie_percentage_75::after, div.pie.pie_percentage_76::after, div.pie.pie_percentage_77::after, div.pie.pie_percentage_78::after, div.pie.pie_percentage_79::after, div.pie.pie_percentage_80::after, div.pie.pie_percentage_81::after, div.pie.pie_percentage_82::after, div.pie.pie_percentage_83::after, div.pie.pie_percentage_84::after, div.pie.pie_percentage_85::after, div.pie.pie_percentage_86::after, div.pie.pie_percentage_87::after, div.pie.pie_percentage_88::after, div.pie.pie_percentage_89::after, div.pie.pie_percentage_90::after, div.pie.pie_percentage_91::after, div.pie.pie_percentage_92::after, div.pie.pie_percentage_93::after, div.pie.pie_percentage_94::after, div.pie.pie_percentage_95::after, div.pie.pie_percentage_96::after, div.pie.pie_percentage_97::after, div.pie.pie_percentage_98::after, div.pie.pie_percentage_99::after, div.pie.pie_percentage_100::after {transform: rotate(180deg);}

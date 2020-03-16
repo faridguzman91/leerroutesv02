@@ -1,0 +1,86 @@
+ul#drag, ul#drop{
+   display:block;
+       
+   cursor:default;
+   list-style: none;
+   list-style-type: none;
+   list-style-image: none;
+   width:47%;
+   min-height: 100px;
+   border:1px solid #CCC;   
+   background-color:white;      
+   padding:0px;
+   margin: 0px;
+}
+
+ul#drag{
+   float:left;
+}
+ul#drop{
+   background: #FFFFFF url('../images/sleephierin.gif') scroll no-repeat center center;
+   float:right;
+}
+
+ul#drag li, ul#drop li{
+   padding:0 !important;
+   margin:5px !important;
+   border:1px solid #007cd0;
+   list-style-type:none;
+   list-style-image: none;
+   background-image:none;
+   background-color:#ebf0f4;
+   font-size: 1em;
+   line-height: 1.3em;  
+   cursor:move;
+}
+ul#drag li:hover, ul#drop li:hover{
+   background-color:#c7d949; 
+}
+ul#drag li img, ul#drop li img{ 
+   margin: -5px 10px -5px -5px;
+       height: 40px !important;
+    width: auto !important;
+}
+
+
+#preview{font-size:10px; margin-top:5px;}
+#preview .error{color:red;background-color:#FFF;font-weight:bold;font-size:14px;border:1px solid red;padding:4px;}
+
+#preview .goed{ color:darkgreen;}
+#preview .goed_order{ color:orange;}
+#preview .fout{ color:red;}
+
+.oranje{color:#e37222;}
+.blauw{color:#00a1de;}
+
+ul#drag li.highlight, ul#drop li.highlight{
+   background-color:#c7d949; 
+   width:auto;
+   height:20px;
+}
+.tipsy img{width:50px;height:50px;}
+
+
+
+#foto_groot{
+    float:right;
+    width:170px; 
+    min-height:200px;
+    /*background-color: #CCC;*/
+}    
+#foto_groot div{
+   margin:0px;
+   padding:10px;
+   color: #00a1de;
+   border:1px solid #FFF;
+   background-color: #FFF;
+   text-align:center;
+}
+#drag .dd_antw > *, 
+#drop .dd_antw > *{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+   
+}

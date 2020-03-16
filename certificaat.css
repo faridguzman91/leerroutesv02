@@ -1,0 +1,32 @@
+body{
+   background-image: none !important;
+}
+.certificaat_container{
+   width:900px;
+   min-height:900px;
+   margin:30px auto;
+   position:relative;
+   
+   -webkit-border-radius:30px;
+   -moz-border-radius:30px;
+   border-radius:30px;
+   border: 3px solid #afb9bd;
+   overflow:hidden;
+   background-color:white;
+}
+.certificaat_top{}
+.certificaat_titel{
+   position:relative;
+   margin-top:-50px;
+   text-align:center;
+}
+.certificaat_titel p{
+   font-family: klant_font;
+   font-size: 30px;  
+   line-height: 25px;
+}
+
+.certificaat_titel p.cert_klein{
+   font-size: 20px;
+   line-height: 20px;
+}

@@ -1,0 +1,428 @@
+@charset "utf-8";
+/* CSS Document */
+#forum_container.forum ul ul .bericht_btns .reageer.knop{display:none;}/*2de etc niveau van reageren op elkaar kan (nog) niet. */
+#forum_container.forum .pinbtn{display:none;}
+
+#forum_container, #forum_container *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;	box-sizing: border-box;}
+
+#forum_container.forum{
+   -webkit-transition: all .5s ease, max-width .5s ease;
+   -moz-transition: all .5s ease, max-width .5s ease;
+   -ms-transition: all .5s ease, max-width .5s ease;
+   -o-transition: all .5s ease, max-width .5s ease;
+   transition: all .5s ease, max-width .5s ease;
+   
+   /*background-color:#e5e5e5;*/
+   
+	display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items:stretch;
+}
+
+body.leerroute #forum_container.forum{height:auto}
+body.module #overflowDiv #forum_container{height: calc(100% - 60px);}
+
+#forum_container.forum .chat_titel{
+	flex:0 1 auto;
+	order: 1;
+}
+body.leerroute #forum_container.forum .chat_titel{
+   flex: 0 1 100%;
+}
+
+#forum_container.forum .chat_scope {
+    order: 2;
+    font-size: .8em;
+    color: white;
+}
+
+#forum_container.forum #chat_div{
+	flex:0 1 auto;
+	order:4;
+   /*height:100%;*/
+}
+#forum_container.forum #chat_write{
+	flex:0 1 auto;
+	order:3;
+	/*height:80px;*/
+ /*  border:1px solid rgba(0,0,0,.1);*/
+}
+#forum_container.forum textarea{height:60px;overflow: auto;}
+
+#forum_container.forum .chat_titel, 
+#forum_container.forum #chat_write,
+#forum_container.forum #chat_div > li{margin-right:20px;}
+
+#forum_container.forum.weg{
+	flex: 0 0 0% !important;
+}
+
+#forum_container.forum .chat_titel,
+#forum_container.forum #chat_div,
+#forum_container.forum .reageren{
+	/*width:100%;*/
+   z-index:2;
+   position:relative;
+}
+#forum_container.forum .reageren{/*padding: 0 25px 0 10px;*/}
+#forum_container li.reactie_form.reageren{    padding: 0 0 0 10px; margin: 0;}
+#forum_container.forum #chat_div{
+	position: relative;
+   overflow: auto;
+	/*background-color: #eaedf1;*/
+	list-style: none;
+	margin: 0;
+	padding: 0;
+   /*border: 1px solid rgba(0,0,0,.1);*/
+}
+
+#forum_container.forum .edit_my_msg_div{
+   margin-left: 50px;
+}
+#forum_container.forum #edit_my_msg_form textarea,
+#forum_container.forum .reageren textarea{
+   width: 100%;
+   display: inline-block;
+   padding-right: 40px;
+   margin-top:10px;
+   /*margin-right:20px;	*/
+   border: 1px solid rgba(0,0,0,.1) !important;
+}
+#forum_container.forum .edit_my_msg_div button[type=submit],
+#forum_container.forum .reageren button[type=submit]{
+   position: relative;
+   z-index: 999;
+   display: inline-block;
+   background-color: transparent;
+   font-size: 24px;
+   height: 40px;
+   line-height: 40px;
+   width: 40px;
+   margin: -55px 15px 0px 0px;
+   color: #007bc7;
+   border: none;
+   padding: 0;
+   float: right;
+   cursor: pointer;
+}
+#forum_container.forum .edit_my_msg_div button[type=submit] span,
+#forum_container.forum .reageren button[type=submit] span{
+   font-size: 24px !important;
+}
+
+
+#forum_container.forum .webinar_close{display:none;}
+
+#forum_container.forum ul#chat_div,
+#forum_container.forum ul#chat_div li {
+   list-style:none;
+}
+
+#forum_container.forum .chat_titel{
+   /*background-color: #eaedf1;*/
+   color: #0282C2;
+   font-size: 1.5em;
+   /*padding:40px 15px 15px 15px;*/
+   padding:0 0 0 0;
+   line-height:2rem;
+}
+#forum_container.forum .chat_titel h1{
+   font-weight:normal;
+   line-height:2.8rem;
+   font-size:2.5rem;
+}
+#forum_container.forum .chat_titel h2{
+   font-weight:normal;
+   line-height:2.3rem;
+   font-size:2rem;  
+}
+#forum_container.forum .chat_titel h3{
+   font-weight:normal;
+   line-height:1.8rem;
+   font-size:1.5rem;  
+}
+#forum_container.forum .chat_titel *:first-child {
+    padding-top: 20px;
+}
+
+/*body.leerroute #forum_container.forum .chat_scope:after,*/
+body.leerroute #forum_container.forum .chat_titel *:first-child:after {
+   content: '';
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   display:inline-block;      
+   float:left;
+   
+}
+body.leerroute #forum_container.forum .chat_titel *:first-child:after {
+   background-image: url(../../images/icons/chat_wit.svg); 
+   height:2rem;
+   width:4rem;
+}
+/*body.leerroute #forum_container.forum .chat_scope:after{
+   background-image: url(../../images/icons/share_wit.svg); 
+   height:2em;
+   width:4em;
+}*/
+body.leerroute #forum_container.forum .chat_scope:before{
+   content: 'In gesprek met ';
+   color:rgba(255,255,255,.7);
+}
+body.module #forum_container.forum .chat_scope{
+   color:rgba(2, 130, 194, 1);
+}
+body.module #forum_container.forum .chat_scope:before{
+   content: 'In gesprek met ';
+   color: rgba(2, 130, 194, 0.7);
+}
+
+
+
+#forum_container.forum .pinbtn{
+   position: absolute;
+   z-index: 999;
+   
+   color: #ffffff;
+   background: #069cd7;
+   line-height: 40px;
+   width: 40px;
+   height: 40px;
+   margin-left: -40px;
+   top: 40px;
+   
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   /*-webkit-transform-origin: left bottom;
+   -moz-transform-origin: left bottom;
+   -ms-transform-origin: left bottom;
+   -o-transform-origin: left bottom;
+   transform-origin: left bottom;
+   -webkit-transform: rotate(-90deg);
+   -moz-transform: rotate(-90deg);
+   -ms-transform: rotate(-90deg);
+   -o-transform: rotate(-90deg);
+   transform: rotate(-90deg);*/
+   font-size: 28px;
+   padding: 0 10px;
+   text-align: center;
+   
+   background-image: url(../../images/icons/forum_wit.svg);
+   background-repeat:no-repeat;
+   background-size:80% 80%;
+   background-position:center center;
+}
+#forum_container.forum .pinbtn i.fa{display:none;}
+
+body.open_opties_0 #forum_container.forum .pinbtn{top:40px;}
+#forum_container.forum .reageren button[type=submit]:hover{color: #ec008c;}
+#forum_container.forum .pinbtn:hover{    
+   cursor: pointer;   
+   background-color: #ec008c;
+}
+
+ul#chat_div li .bericht{
+   /*border: 1px solid rgba(0,0,0,.1);*/
+   -webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;
+   overflow:hidden;    
+   padding: 5px;
+}
+ul#chat_div li.mijn_bericht,
+ul#chat_div li.jouw_bericht{border: 1px solid rgba(0,0,0,.1);background-color: rgba(255,255,255, 1);}
+/*
+ul#chat_div li.mijn_bericht > .bericht{background-color: rgba(2, 130, 194, 0.1) !important;}
+ul#chat_div li.jouw_bericht > .bericht{background-color: rgba(255,255,255, 1);}
+*/
+ul#chat_div li.date{
+   /*text-indent: 10px;*/
+   /*background-color: rgba(0,0,0,0.1);*/
+   color: #777;
+   /*border-top: 1px solid rgba(0,0,0,0.1);*/
+}
+ul#chat_div li.date,
+ul#chat_div li.date *{font-size:.8rem}
+ul#chat_div li.date:before{content:'Berichten van ';}
+ul#chat_div li {
+   display: block;
+   margin: 0 0 10px 0;
+   padding: 0;
+   /*width: 75%;*/
+   /*width:auto;*/
+   position: relative;
+   -webkit-transition: .2s cubic-bezier(.31,.34,.3,.99);
+   transition: .2s cubic-bezier(.31,.34,.3,.99);
+   word-wrap: break-word;
+   
+}
+
+.bericht_btns span{
+   color:rgba(0, 123, 199, 0.5);
+   cursor:pointer;
+   padding:1px 5px;
+   -webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;
+}
+.bericht_btns span:hover{
+   color:#fff;
+   background-color:#007bc7;
+}
+.bericht_btns .knop:before{
+   font-family:FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	text-decoration:none;   
+}
+.bericht_btns .knop.bewerk:before{content: '\f044';}
+.bericht_btns .knop.reageer:before{content: '\f27a';}
+.bericht_btns .knop.sluit:before{content: '\f00d' !important;}
+
+.bericht_btns .knop.bewerk:after{content: ' Wijzigen';}
+.bericht_btns .knop.reageer:after{content: ' Reageren';}
+#chat_div li .bericht *{font-size:.8rem;}
+#chat_div li .bericht_tijd,
+#chat_div li .bericht_naam,
+#chat_div li .bericht_tijd *{
+   line-height:1.2em;
+}
+#chat_div li .bericht_tijd{
+   color:#666;
+   float:right;
+   padding-right:5px;
+   max-width: 40%;
+   text-align:right;
+}
+#chat_div li .bericht_foto{
+   float:left;
+   max-height:40px;
+   max-width:40px;
+   width:40px;
+   height:auto;
+   /*margin:-5px 10px 10px -5px;*/
+   margin:0 10px 10px 0;
+}
+#chat_div li .bericht_foto img{
+   width:100%;
+	height:auto;
+   max-height:40px;
+   max-width:40px;
+   -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;
+}
+/*#chat_div li .bericht_foto span:before{
+   font-family:FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	text-decoration:none;
+
+	position:relative;
+	display:inline-block;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	font-size:2rem;
+	content:'\f2bd';
+   text-align:center;
+}*/
+#chat_div li .bericht_naam{
+   font-weight:bold;
+}
+#chat_div li .bericht_text{
+	/*padding:0 10px;*/
+   padding: 10px 10px 0 10px;
+   margin-left:40px;
+   line-height:1.2rem;
+}
+#chat_div li .bericht_btns{
+   text-align:right;
+   padding-right:5px;
+}
+
+#chat_div li.nomsg{color:#666;padding:.5em 10px;}
+#chat_div ul.reacties_op{
+	/*margin: 10px 0 10px 50px;	*/
+   margin: 0 0 0 55px;	
+   border-left: 3px solid rgba(0,0,0,.2);
+}
+#chat_div ul.reacties_op > li{
+   margin-right:10px;
+}
+#chat_div ul.reacties_op > li > .bericht {
+    background-color: rgba(0,0,0,.02);
+}
+
+
+
+/*Chat in een cbt my_assignment_lezen.asp in het midden */
+body.module #assignment_content ul#chat_div li.mijn_bericht, 
+body.module #assignment_content ul#chat_div li.jouw_bericht,
+body.module #assignment_content ul#chat_div li {
+   border: 1px solid transparent;
+   /*border-bottom-color: rgba(0,0,0,.1);*/
+   background-color: transparent;
+   background-image: none;
+}
+body.module #assignment_content #forum_container #chat_write textarea,
+body.module #assignment_content ul#chat_div li .bericht,
+body.module #assignment_content ul#chat_div li .bericht *{font-size:1rem !important;line-height: 1.2rem;}
+body.module #assignment_content ul#chat_div li .bericht{border-bottom: 1px solid rgba(0,0,0,.1);}
+body.module #assignment_content ul#chat_div li ul.reacties_op{
+   margin-left: 25px !important;
+    /*border-left-style: dashed;*/
+}
+body.module #assignment_content ul#chat_div li ul.reacties_op li{
+   margin-left:0 !important;
+   padding-left:0 !important;
+   
+   
+}
+
+@media only screen and (max-width:960px){   
+   body.module div#forum_container.forum,
+   body.module div#forum_container.forum.weg {
+      left:100%;
+   }
+   
+   
+   body.module div#forum_container.forum.blijf {
+      left:40px;
+      width:calc(100% - 40px);
+   }
+   
+   body.module div#forum_container {
+      position: fixed;
+      z-index: 10;
+      flex: 0 1 100% !important;
+      background: white;
+      top: 61px;
+      overflow: visible !important;
+   }
+   body.module div#forum_container.forum .pinbtn{display:block;}
+   
+   .assignment_content > .padding{padding:0 1em;}
+   
+   /*Chat in cbt in het midden */
+   body.module div#assignment_content div#forum_container.forum,
+   body.module div#assignment_content div#forum_container.forum.weg {
+      left:0;
+   }
+   body.module div#assignment_content div#forum_container.forum.blijf {
+      left: 0;
+      width: 100%;
+   }
+   
+   body.module div#assignment_content div#forum_container {
+      position: relative;
+      z-index: 1;
+      flex: 0 1 100% !important;
+      top:0;
+      /*background: white;
+      top: 61px;*/
+      /*overflow: visible !important;*/
+   }
+   body.module div#assignment_content div#forum_container.forum .pinbtn{display:none;}
+}
+

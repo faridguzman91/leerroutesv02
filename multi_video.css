@@ -1,0 +1,115 @@
+/* multi video: meerdere video's in een opdracht item*/
+#multi_video_holder #multi_video_sluit_overlay{
+   position: absolute;
+   right: 5px;
+   top: 5px;
+   margin: 5px;
+   z-index: 1003;
+   background-color: #fff;
+   padding: 5px !important;
+   height: 32px !important;
+   width: 32px !important;
+
+}
+#multi_video_holder #multi_video_groot{
+	position:relative;
+	margin:0 auto;
+	z-index:1002;   
+       flex: 0 1 100%;
+   
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: flex;
+   justify-content: center;
+}
+#multi_video_holder #multi_video_groot #video_multi_video_groot{
+   max-height:100%;
+}
+
+#multi_video_holder #multi_video_overlay{
+	z-index:1001;
+   position:absolute;
+   width:100%; 
+   min-height:394px;
+   height:100%;
+    background: rgba(255, 255, 255, 0.9);
+	/*opacity:0.85;  */ 
+   box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;      
+   
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   flex-flow: row wrap;
+}
+#multi_video_holder{
+   position: relative;
+   
+}
+div#multi_video_holder {
+   margin: 0 -30px;
+   padding: 0;
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: flex-start;
+   align-content: space-around;
+}
+div#multi_video_holder video#html5MediaPlayermulti_video_groot{
+    width: auto !important;
+
+    min-height: 30px !important;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+
+}
+#multi_video_holder .open_video{
+	float:left;
+	cursor:pointer;   
+   height:auto;
+
+}
+#multi_video_holder.max2 .open_video{	width:48%;margin:1%;}
+#multi_video_holder.max4 .open_video{	    
+    flex: 0 1 45%;
+    height: 40%;
+    text-align: center;
+    margin: 0;
+    padding: 2%;
+}
+#multi_video_holder.max4 .open_video:nth-of-type(even){text-align: right;}
+#multi_video_holder.max4 .open_video:nth-of-type(odd){text-align: left;}
+#multi_video_holder.max6 .open_video{	width:30%;margin:1.66%;}
+#multi_video_holder.max12 .open_video{	width:20%;margin:2.5%;}
+
+#multi_video_holder .open_video img{
+   width: auto;
+    height: 100%;
+   border:2px solid rgba(2, 130, 194, 1);
+}
+#multi_video_holder .open_video img:hover{
+   border:2px solid #FFF;
+}
+
+
+#multi_video_holder #multi_video_overlay.vid_verberg{display: none;}
+#multi_video_holder #multi_video_overlay.toon_verberg{display: block;}
+
+#multi_video_holder .vid_titel1, #multi_video_holder .vid_titel2{ 
+   display:inline-block;
+} 
+#multi_video_holder .vid_titel1{margin-right:1em;}
+#multi_video_holder .vid_titel2{font-style: italic;}
+
+#multi_video_holder #multi_video_overlay .vid_titel1,
+#multi_video_holder #multi_video_overlay .vid_titel2{font-size:1.2em;}

@@ -1,0 +1,113 @@
+/*LABELS*/
+ul.labels_lijst{
+   margin:0; padding:0;
+   list-style:none;
+}
+a.labels,
+ul.labels_lijst li{
+   float:left;
+   margin:1px 10px 1px 0px;
+}
+a.labels,
+ul.labels_lijst li,
+ul.label_keuze_lijst li{
+   list-style:none;
+   /*padding:0 5px 0 3px;*/
+   padding:0 5px;
+   color:#FFF;
+   /*border: 1px solid rgb(169, 194, 222);*/
+   border:none;
+   background-color: rgb(45, 155, 206);
+   height:20px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
+   font: 12px/20px Helvetica, Arial, sans-serif !important;
+   position:relative;
+   box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   /*display:inline-block;*/
+   
+   -ms-transform-origin: 10px 10px 0;
+   -webkit-transform-origin: 10px 10px 0;
+   transform-origin: 10px 10px 0;
+}
+ul.labels_lijst > li{display:none;}
+ul.labels_lijst > li.label_cat_tags{display:inline-block;}
+
+/*a.labels:hover,
+ul.labels_lijst li:hover,
+ul.label_keuze_lijst li:hover{
+    -ms-transform: rotate(4deg); 
+   -webkit-transform: rotate(4deg); 
+   transform: rotate(4deg);   
+}*/
+/*
+a.labels:before,
+ul.labels_lijst li:before,
+ul.label_keuze_lijst li:before {
+   content:'';
+   display:inline-block;
+   float:left;
+   width:14.1px;height:14.1px;
+   background-color: rgb(169, 194, 222);
+   position:relative;
+   z-index:1;
+   margin-left:-3px;
+   
+   -ms-transform-origin: 0 0 0;
+   -webkit-transform-origin: 0 0 0;
+   transform-origin: 0 0 0;
+   
+   -ms-transform: rotate(45deg); 
+   -webkit-transform: rotate(45deg); 
+   transform: rotate(45deg);
+}
+
+a.labels:after,
+ul.labels_lijst li:after,
+ul.label_keuze_lijst li:after{
+   content: '\2022';
+   color: #dbe3ea;
+   float: left;
+   position: relative;
+   z-index: 2;
+   margin-left: -15px;
+   font-size: 35px;
+}
+*/
+/*LABEL PIJL LINKS*/
+/*
+a.labels:after,
+ul.labels_lijst li:after,
+ul.label_keuze_lijst li:after,
+a.labels:before,
+ul.labels_lijst li:before,
+ul.label_keuze_lijst li:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: '';
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+a.labels:after,
+ul.labels_lijst li:after,
+ul.label_keuze_lijst li:after {
+	border-color: rgba(207, 212, 220, 0);
+	border-right-color: #4585d1;
+	border-width: 8px;
+	margin-top: -8px;
+}
+a.labels:before,
+ul.labels_lijst li:before,
+ul.label_keuze_lijst li:before {
+	border-color: rgba(114, 121, 133, 0);
+	border-right-color: #4585d1;
+	border-width: 9px;
+	margin-top: -9px;
+}
+*/
